@@ -1,0 +1,28 @@
+.about {
+  /* min-height: 100vh; */
+  background-color: #020617;
+  padding: 80px 80px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .about, .skills, .projects, .contact, .leetcode {
+    padding: 60px 20px; /* Side padding 80px se 20px kar di */
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+}
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}

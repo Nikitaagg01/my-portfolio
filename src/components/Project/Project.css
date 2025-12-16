@@ -1,0 +1,53 @@
+.projects {
+  padding: 100px 80px;
+  background-color: #020617;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #38bdf8;
+  margin-bottom: 40px;
+  font-size:32px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  /* Projects grid automatically adjust ho jayega kyuki humne repeat(auto-fit) use kiya hai */
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-info {
+    text-align: center;
+    width: 100%;
+  }
+}
+.project-card {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}

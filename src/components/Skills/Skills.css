@@ -1,0 +1,44 @@
+.skills {
+  padding: 60px 80px;
+  background-color: #020617;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 32px;
+  color: #38bdf8;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .about, .skills, .projects, .contact, .leetcode {
+    padding: 60px 20px; /* Side padding 80px se 20px kar di */
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.skill-card {
+  background: #1e293b;
+  color: #cbd5f5;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  border: 1px solid #38bdf8;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-5px);
+}

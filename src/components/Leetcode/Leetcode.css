@@ -1,0 +1,69 @@
+.leetcode {
+  padding: 80px 80px;
+  background-color: #020617; /* Match with Hero.css */
+  text-align: center;
+}
+
+.leetcode h2 {
+  font-size: 32px;
+  color: #38bdf8; /* Match with Hero span color */
+  margin-bottom: 40px;
+}
+
+.leetcode-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.stats-card {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-item .count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.stat-item .label {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.leetcode-info p {
+  color: #cbd5f5;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.leetcode-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #38bdf8; /* Outline style like Hero */
+  color: #38bdf8;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.leetcode-btn:hover {
+  background: #38bdf8;
+  color: black;
+}
