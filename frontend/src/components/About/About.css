@@ -1,28 +1,60 @@
 .about {
-  /* min-height: 100vh; */
-  background-color: #020617;
-  padding: 80px 80px;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+  padding: 100px 80px;
   text-align: center;
+  position: relative;
 }
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
+}
+
 @media (max-width: 768px) {
   .about, .skills, .projects, .contact, .leetcode {
-    padding: 60px 20px; /* Side padding 80px se 20px kar di */
+    padding: 80px 20px;
   }
 
   .about p {
     font-size: 16px;
   }
 }
+
 .about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #38bdf8;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  animation: slideInUp 0.8s ease-out;
 }
 
 .about p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #cbd5f5;
+  max-width: 850px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0f2fe;
+  animation: slideInUp 0.8s ease-out;
+  transition: all 0.3s ease;
+}
+
+.about p strong {
+  background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.about p:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
 }

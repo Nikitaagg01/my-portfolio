@@ -8,11 +8,24 @@
   align-items: center;
   padding: 0 50px;
   z-index: 1000;
-  background: rgba(2, 6, 23, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
-
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.1);
+  animation: slideDown 0.5s ease-out;
 }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0 20px;
@@ -27,14 +40,25 @@
     font-size: 14px;
   }
 }
+
 .navbar h2 {
-  color: #38bdf8;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.navbar h2:hover {
+  transform: scale(1.05);
 }
 
 .navbar ul {
   display: flex;
-  gap: 25px;
+  gap: 35px;
   list-style: none;
 }
 
@@ -42,9 +66,30 @@
   text-decoration: none;
   color: #e5e7eb;
   font-size: 16px;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 3px;
 }
 
-.navbar a:hover {
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
   color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
 }
